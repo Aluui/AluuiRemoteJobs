@@ -1,0 +1,10 @@
+
+<div *ngIf="jobs$ | async as jobs">
+
+  <div class="singlejob" *ngFor="let job of jobs">
+    <h4>Title: {{job.title}}</h4>
+    <p>Summary: {{job.summary}}</p>
+    <p>Location: {{job.location}}</p>
+    <a [href]="job.url" target="_blank"> See more</a>
+  </div>
+</div>
