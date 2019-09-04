@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { IngreedService } from './ingreed.service';
+import { JobService } from './job.service';
 
-describe('IngreedService', () => {
+describe('JobService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: IngreedService = TestBed.get(IngreedService);
+    const service: JobService = TestBed.get(JobService);
     expect(service).toBeTruthy();
   });
 });
