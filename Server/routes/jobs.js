@@ -4,35 +4,35 @@ const router = express.Router();
 
 const url = "https://indreed.herokuapp.com/api/jobs";
 
-getIngreedJobs = async () => {
-  const jobs = await axios.get(url, {
-    params: {
-        q: "remote web developers",
-        l: "Canada"
-    }
-  });
+// getIngreedJobs = async () => {
+//   const jobs = await axios.get(url, {
+//     params: {
+//         q: "remote web developers",
+//         l: "Canada"
+//     }
+//   });
 
-  return jobs;
-}
+//   return jobs;
+// }
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   // const jobs = getIngreedJobs()  ;
 
   // res.send(jobs);
 
   axios.get(url, {
     params: {
-        q: "remote web developers",
-        l: "Canada"
+      q: "remote web developers"
+      //l: "United States"
     }
   })
     .then((response) => {
-        res.send(response.data);
+      res.send(response.data);
     })
     .catch((error) => {
-        console.log(error);
-        res.send(error);
+      console.log(error);
+      res.send(error);
     })
 });
 
